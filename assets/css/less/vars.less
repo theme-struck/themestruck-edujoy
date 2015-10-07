@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+@brand1: #ff0b00;
+@brand2: #00c4ff;
+@text: #222;
+@secondary-font: 'Vollkorn',
+serif;
+@secondary-font: 'Arvo',
+serif;
+
+/* Layout Breakpoints */
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile: ~"only screen and (max-width: 479px)";
+@tablet: ~"only screen and (min-width: 480px) and (max-width: 991px)";
+@desktop: ~"only screen and (min-width: 992px) and (max-width: 1199px)";
+@desktop-xl: ~"only screen and (min-width: 1200px)";
+
+.bg {
+    &-brand1 {
+        background: @brand1;
+    }
+    &-brand2 {
+        background: @brand2;
+    }
+}
+
+.btn-brand1 {
+    color: #fff;
+    background-color: @brand1;
+    border-color: darken(@brand1, 5);
+    &:hover {
+        background-color: darken(@brand1, 5);
+    }
+}
+.btn-brand2 {
+    color: #fff;
+    background-color: @brand2;
+    border-color: darken(@brand2, 5);
+    &:hover {
+        background-color: darken(@brand2, 5);
+    }
+}
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    &:hover {
+        background: #fff;
+        color: #222;
+    }
+}
+.text {
+    &-brand1 {
+        color: @brand1;
+    }
+    &-brand2 {
+        color: @brand2;
+    }
+}

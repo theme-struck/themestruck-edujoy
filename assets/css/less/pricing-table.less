@@ -1,0 +1,90 @@
+@import 'vars';
+
+.price-table{
+    &>div{
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .btn{
+        border-radius: 4px;
+    }
+}    
+.panel-price{
+    border: none;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.6);
+    background-image: -moz-linear-gradient(left, rgba(83, 69, 91, 0.13) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background-image: -webkit-linear-gradient(left, rgba(83, 69, 91, 0.13) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background-image: linear-gradient(left, rgba(83, 69, 91, 0.13) 0%, rgba(255, 255, 255, 0.6) 100%);
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.panel-heading{
+    h3{
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        &:after{
+            content: '';
+            height: 2px;
+            width: 50px;
+            position: absolute;
+            background: #222;
+            top: 115%;
+            left: 50%;
+            margin-left: -25px;
+        }
+    }
+    
+}
+.panel-body{
+    background: #00ebff;
+    background: rgba(34, 200, 214, 0.4);
+    color: #fff;
+    padding: 30px 15px;
+    ul{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    li{
+        padding: 8px 10px;
+    }
+}
+.panel-footer{
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    .btn-buy{
+        margin: 0 auto;
+        width: 60%;
+        border: none;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 12px;
+    }
+}
+.panel-price.panel-active{
+    transform: scale(1.04);
+    background: #fff;
+    z-index: 2;
+    position: relative;
+    background-image: -moz-linear-gradient(left, rrgba(83, 69, 91, 0.13) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background-image: -webkit-linear-gradient(left, rgba(83, 69, 91, 0.13) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background-image: linear-gradient(left, rrgba(83, 69, 91, 0.13) 0%, rgba(255, 255, 255, 0.6) 100%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    .btn-buy{
+        .btn-brand1;
+    }
+}
+@media all and (min-width: 768px){
+    .panel-price.panel-active{
+        transform: scale(1.1);
+    }
+    .no-gutter > [class*='col-'] {
+        padding-right:0;
+        padding-left:0;
+    }
+}

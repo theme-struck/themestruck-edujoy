@@ -1,0 +1,302 @@
+@import 'vars';
+/****************************
+*   FOR RESPONSIVENESS      *
+****************************/
+html {
+    font-size: 14px;
+}
+@media only screen and (min-width: 480px) {
+    html {
+        font-size: 17px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    html {
+        font-size: 20px;
+    }
+    p {
+        font-size: 0.8em;
+    }
+}
+
+/****************************
+*   BASIC TEMPLATE RULES    *
+****************************/
+body {
+    color: @text;
+    font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: @secondary-font;
+}
+.img-full {
+    width: 100%;
+}
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/************************************
+*   IMPORTING NAVIGATION ELEMENT    *
+Element Design From
+http://thecodeblock.com/responsive-shrink-on-scroll-down-header-menu/
+************************************/
+@import 'nav';
+.head-hero {
+    min-height: 640px;
+    background: #ccc;
+    background-image: url(../img/5_technology.jpg);
+    background-size: cover;
+    background-position: top;
+    padding-top: 180px;
+    h1 {
+        font-family: @secondary-font;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+        font-size: 2em;
+    }
+    h3 {
+        line-height: 1.4;
+        font-size: 1.4em;
+    }
+}
+
+/****************************
+*           HERO            *
+****************************/
+.main-menu ul li.active{
+    background: #fff;
+    a{
+        color: @brand2;
+    }
+}
+
+/****************************
+*           HERO            *
+****************************/
+.hero-form {
+    margin-top: 60px;
+    input {
+        margin-top: 15px;
+    }
+}
+/****************************
+*   HOME SECTION RULES      *
+****************************/
+.section-home {
+    padding-bottom: 100px;
+    .title {
+        h2 {
+            margin-top: 100px;
+            font-size: 1.5em;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 2px;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                background: #222;
+                width: 40px;
+                top: 100%;
+                left: 0;
+            }
+        }
+        h3 {
+            margin-top: 10px;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+        }
+        &.text-center {
+            h2:after {
+                left: 50%;
+                margin-left: -20px;
+            }
+        }
+        &.text-right {
+            h2:after {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+}
+/***********************************************
+*   CLASS FOR SECTION WITH DARK BACKGROUNDS    *
+***********************************************/
+.dark-block {
+    background: #222;
+    color: #fff;
+    .title {
+        h2 {
+            &:after {
+                background: #fff;
+            }
+        }
+    }
+}
+
+/****************************
+*        ABOUT BLOCK        *
+****************************/
+.about-block {
+    .about-image {
+        img {
+            max-width: 100%;
+        }
+    }
+    .about-details {
+        .btn {
+            margin-top: 10px;
+        }
+        padding-bottom: 100px;
+    }
+}
+
+/****************************
+*      COURSES BLOCK        *
+****************************/
+.courses-block {
+    .dark-block;
+    background-image: url(../img/800.jpg);
+    background-size: cover;
+    background-position: top;
+    .course-item {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.29);
+        figure {
+            img {
+                max-width: 100%;
+            }
+        }
+        .content {
+            padding: 20px 10px;
+            padding-bottom: 30px;
+            .btn-outline {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/****************************
+*   TECHERS OWL SLIDER      *
+****************************/
+.teacher-block {
+    background: #f0f0f0;
+    padding-bottom: 100px;
+    .teacher-slider {
+        figure {
+            margin: 0 auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                max-width: 100%;
+            }
+        }
+        .thumbnail {
+            margin: 15px;
+            padding: 30px;
+            padding-top: 45px;
+        }
+    }
+}
+
+/****************************
+*     FEATURES BLOCK        *
+****************************/
+.features-block {
+    .feature-item {
+        padding-right: 30px;
+        margin-bottom: 30px;
+        figure {
+            width: 100px;
+            float: left;
+            margin-right: 20px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+/****************************
+*     GALLERY BLOCK         *
+****************************/
+.gallery-block {
+    background: rgba(247, 255, 145, 0.18);
+}
+
+/****************************
+*     PRICING TABLE         *
+****************************/
+.pricing-block {
+    background-image: url(../img/sea-sky-clouds-weather.jpg);
+    background-size: cover;
+    background-position: center;
+    .title h2 {
+        margin-bottom: 80px;
+    }
+}
+
+/* Pricing table element less import */
+@import 'pricing-table';
+
+/****************************
+*     CONTACT BLOCK         *
+****************************/
+.contact-block {
+    .contact-list {
+        list-style: none;
+        padding: 0;
+        i {
+            font-size: 2em;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        li {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .contact-form {
+        margin-top: 100px;
+    }
+}
+
+/****************************
+*       FOOTER BLOCK        *
+****************************/
+.footer-block {
+    .signup {
+        padding: 60px 0;
+        color: #fff;
+        h2 {
+            font-weight: bold;
+        }
+        .btn-outline {
+            margin-top: 30px;
+        }
+    }
+}
